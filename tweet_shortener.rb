@@ -16,7 +16,7 @@ def word_substituter (tweet)
   arr = tweet.split("")
   l = a.size
   dictionary.each do |key, value|
-    for words in 0..l-1
+    arr.each do 
       if a[words] = key
         a[words] = value
       end
