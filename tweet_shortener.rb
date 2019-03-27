@@ -38,5 +38,9 @@ def word_substituter(tweet)
   end.join(" ")
 end
 
+def selective_tweet_shortener()
+end
+
 def shortened_tweet_truncator()
+end
   
