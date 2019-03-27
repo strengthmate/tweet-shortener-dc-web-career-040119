@@ -9,7 +9,6 @@ def dictionary
   "at" => "@",
   "and" => "&"
 }
-
 end
 
 #Attempred solution
