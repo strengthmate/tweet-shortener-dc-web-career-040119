@@ -26,6 +26,7 @@ end
 # end
 
 #Actual Solution
+
 def word_substituter(tweet)
   tweet.split.collect do |word|
     if dictionary.keys.include?(word.downcase)
@@ -35,4 +36,3 @@ def word_substituter(tweet)
     end
   end.join(" ")
 end
-
