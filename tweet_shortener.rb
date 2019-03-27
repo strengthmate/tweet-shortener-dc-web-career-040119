@@ -1,6 +1,6 @@
 # Write your code here.
 def dictionary 
-  dictionary_hash = {
+  dictionary = {
   "hello" => 'hi',
   "to, two, too" => '2',
   "for, four" => '4',
@@ -13,9 +13,9 @@ def dictionary
 end
 
 def word_substituter (tweet)
-  a = tweet.split("")
+  arr = tweet.split("")
   l = a.size
-  dictionary_hash.each do |key, value|
+  dictionary.each do |key, value|
     for words in 0..l-1
       if a[words] = key
         a[words] = value
