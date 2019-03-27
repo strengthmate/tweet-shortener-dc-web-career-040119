@@ -28,11 +28,11 @@ end
 #Actual Solution
 
 def word_substituter(tweet)
-  tweet.split.collect do |word|
-    if dictionary.keys.include?(word.downcase)
-      word = dictionary[word.downcase]
-    else
-      word
+  tweet = tweet.dup
+  dictionary.each do |word, replacement|
+    if tweet.include?(word)
+      tweet.gsub!(/\b#{word}\b/i, replacement)
     end
-  end.join(" ")
+  end
+  tweet
 end
