@@ -19,7 +19,7 @@ def word_substituter (tweet)
       if words = key
         words = value
       end
-        return a.join("")
+        return arr.join("")
     end
   end
 end
