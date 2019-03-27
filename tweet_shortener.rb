@@ -12,25 +12,27 @@ def dictionary
 
 end
 
-def word_substituter (tweet)
-  arr = tweet.split("")
-  dictionary.each do |key, value|
-    arr.each do |words|
-      if words = key
-        words = value
-      end
+#Attempred solution
+# def word_substituter (tweet)
+#   arr = tweet.split("")
+#   dictionary.each do |key, value|
+#     arr.each do |words|
+#       if words = key
+#         words = value
+#       end
+#     end
+#   return arr.join("")
+#   end
+# end
+
+#Actual Solution
+def word_substituter(tweet)
+  tweet.split.collect do |word|
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word.downcase]
+    else
+      word
     end
-   return arr.join("")
-  end
+  end.join(" ")
 end
 
-
-# def word_substituter(tweet)
-#   tweet.split.collect do |word|
-#     if dictionary.keys.include?(word.downcase)
-#       word = dictionary[word.downcase]
-#     else
-#       word
-#     end
-#   end.join(" ")
-# end5
