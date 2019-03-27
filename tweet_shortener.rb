@@ -20,7 +20,7 @@ def word_substituter (tweet)
         words = value
       end
     end
-            return arr.join("")
+   return arr.join("")
   end
 end
 
@@ -33,4 +33,4 @@ end
 #       word
 #     end
 #   end.join(" ")
-# end
+# end5
